@@ -71,8 +71,7 @@ def material_waste(total_material, material_units, num_jobs, job_consumption):
     str
         the amount of remaining material expressed with its unit (e.g., "10kg").
     '''
-    # Replace `pass` with your code. 
-    # Stay within the function. Only use the parameters as input. The function should return your answer.
+    
     t=int(input("Total Material Available: "))
     n=int(input("Number of Jobs: "))
     s=int(input("Material Consumed per Job: "))
@@ -107,8 +106,7 @@ def interest(principal, rate, periods):
     int
         the final value of the investment
     '''
-    # Replace `pass` with your code. 
-    # Stay within the function. Only use the parameters as input. The function should return your answer.
+    
     p=int(input("Principal Amount: "))
     r=float(input("Rate in Percentage: "))
     t=int(input("Period: "))
