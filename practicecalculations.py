@@ -31,8 +31,7 @@ def savings(gross_pay, tax_rate, expenses):
     int
         the number of centavos remaining from an employee's pay after taxes and expenses
     '''
-    # Replace `pass` with your code. 
-    # Stay within the function. Only use the parameters as input. The function should return your answer.
+    
     g=int(input("Gross Pay: "))
     t=float(input("Taxes: "))
     e=int(input("Expenses: "))
@@ -146,8 +145,7 @@ def body_mass_index(weight, height):
     float
         the BMI of the person.
     '''
-    # Replace `pass` with your code. 
-    # Stay within the function. Only use the parameters as input. The function should return your answer.
+    
     v=int(input("Feet: "))
     o=int(input("Inches: "))
 
