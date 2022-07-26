@@ -4,10 +4,10 @@ Useful Business Calculations
 
 This assignment covers your basic proficiency with Python.
 '''
-g=int(input("Gross Pay: "))
-t=float(input("Taxes: "))
-e=int(input("Expenses: "))
-int(t)
+gross_pay=int(input("Gross Pay: "))
+tax_rate=float(input("Taxes: "))
+expenses=int(input("Expenses: "))
+int(tax_rate)
 def savings(gross_pay, tax_rate, expenses):
     '''Savings.
     5 points.
@@ -36,8 +36,8 @@ def savings(gross_pay, tax_rate, expenses):
     '''
    
 
-    return (g*(1-t))-e
-savings(g,t,e)
+    return (gross_pay*(1-tax_rate))-expenses
+savings(gross_pay,tax_rate,expenses)
 
 total_material=int(input("Total Material Available: "))
 num_jobs=int(input("Number of Jobs: "))
@@ -108,8 +108,8 @@ def interest(principal, rate, periods):
         the final value of the investment
     '''
 def interest(period,rate,t):
-    return p*(1+r*t)
-x=interest(p,r,t)
+    return principal*(1+rate*period)
+x=interest(principal,rate,period)
 int(x)
 
 #def body_mass_index(weight, height):
