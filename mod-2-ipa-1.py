@@ -4,7 +4,10 @@ Useful Business Calculations
 
 This assignment covers your basic proficiency with Python.
 '''
-
+g=int(input("Gross Pay: "))
+t=float(input("Taxes: "))
+e=int(input("Expenses: "))
+int(t)
 def savings(gross_pay, tax_rate, expenses):
     '''Savings.
     5 points.
@@ -31,15 +34,15 @@ def savings(gross_pay, tax_rate, expenses):
     int
         the number of centavos remaining from an employee's pay after taxes and expenses
     '''
-    
-    g=int(input("Gross Pay: "))
-    t=float(input("Taxes: "))
-    e=int(input("Expenses: "))
-    int(t)
-    def savings(g,t,e):
-        return (g*(1-t))-e
-    savings(g,t,e)
+   
 
+    return (g*(1-t))-e
+savings(g,t,e)
+
+total_material=int(input("Total Material Available: "))
+num_jobs=int(input("Number of Jobs: "))
+job_consumption=int(input("Material Consumed per Job: "))
+material_units=str(input("Unit for Materials: "))
 def material_waste(total_material, material_units, num_jobs, job_consumption):
     '''Material Waste.
     5 points.
@@ -71,15 +74,13 @@ def material_waste(total_material, material_units, num_jobs, job_consumption):
     str
         the amount of remaining material expressed with its unit (e.g., "10kg").
     '''
-    
-    t=int(input("Total Material Available: "))
-    n=int(input("Number of Jobs: "))
-    s=int(input("Material Consumed per Job: "))
-    u=str(input("Unit for Materials: "))
-    def material_waste(t,n,s):
-        return t-(n*s)
-    print((str(int(material_waste(t,n,s))))+u)
+ 
+    return total_material-(num_jobs*job_consumption)
+print((str(int(material_waste(total_material,num_jobs,job_consumption))))+material_units)
 
+principal=int(input("Principal Amount: "))
+rate=float(input("Rate in Percentage: "))
+periods=int(input("Period: "))
 def interest(principal, rate, periods):
     '''Interest.
     5 points.
@@ -106,16 +107,12 @@ def interest(principal, rate, periods):
     int
         the final value of the investment
     '''
-    
-    p=int(input("Principal Amount: "))
-    r=float(input("Rate in Percentage: "))
-    t=int(input("Period: "))
-    def interest(p,r,t):
-        return p*(1+r*t)
-    x=interest(p,r,t)
-    int(x)
+def interest(period,rate,t):
+    return p*(1+r*t)
+x=interest(p,r,t)
+int(x)
 
-def body_mass_index(weight, height):
+#def body_mass_index(weight, height):
     '''Body Mass Index.
     5 points.
 
@@ -144,17 +141,17 @@ def body_mass_index(weight, height):
         the BMI of the person.
     '''
     
-    v=int(input("Feet: "))
-    o=int(input("Inches: "))
+v=int(input("Feet: "))
+o=int(input("Inches: "))
 
-    a=[v,o]
-    str(a)
-    print(a)
-    def listheight(v,o):
-        return ((v*12)+o)/39.37
-    listheight(v,o)
-    w=float(input("Weight: "))
-    def weight(w):
-        return w/2.2
-    weight(w)
-    weight(w)/(listheight(v,o)**2)
+a=[v,o]
+str(a)
+print(a)
+def listheight(v,o):
+    return ((v*12)+o)/39.37
+listheight(v,o)
+w=float(input("Weight: "))
+def weight(w):
+    return w/2.2
+weight(w)
+weight(w)/(listheight(v,o)**2)
