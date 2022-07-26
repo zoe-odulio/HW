@@ -4,10 +4,7 @@ Useful Business Calculations
 
 This assignment covers your basic proficiency with Python.
 '''
-gross_pay=int(input("Gross Pay: "))
-tax_rate=float(input("Taxes: "))
-expenses=int(input("Expenses: "))
-int(tax_rate)
+
 def savings(gross_pay, tax_rate, expenses):
     '''Savings.
     5 points.
@@ -34,15 +31,9 @@ def savings(gross_pay, tax_rate, expenses):
     int
         the number of centavos remaining from an employee's pay after taxes and expenses
     '''
-   
+    return int((gross_pay*(1-tax_rate))-expenses)
 
-    return (gross_pay*(1-tax_rate))-expenses
-savings(gross_pay,tax_rate,expenses)
 
-total_material=int(input("Total Material Available: "))
-num_jobs=int(input("Number of Jobs: "))
-job_consumption=int(input("Material Consumed per Job: "))
-material_units=str(input("Unit for Materials: "))
 def material_waste(total_material, material_units, num_jobs, job_consumption):
     '''Material Waste.
     5 points.
@@ -75,13 +66,10 @@ def material_waste(total_material, material_units, num_jobs, job_consumption):
         the amount of remaining material expressed with its unit (e.g., "10kg").
     '''
  
-    return total_material-(num_jobs*job_consumption)
-print((str(int(material_waste(total_material,num_jobs,job_consumption))))+material_units)
+    waste = total_material-(num_jobs*job_consumption)
+    return str(waste)+material_units
 
-principal=int(input("Principal Amount: "))
-rate=float(input("Rate in Percentage: "))
-periods=int(input("Period: "))
-#def interest(principal, rate, periods):
+def interest(principal, rate, periods):
     '''Interest.
     5 points.
 
@@ -107,12 +95,10 @@ periods=int(input("Period: "))
     int
         the final value of the investment
     '''
-def interest(period,rate,periods):
-    return principal*(1+rate*period)
-x=interest(principal,rate,period)
-int(x)
+    return int(principal*(1+rate*periods))
 
-#def body_mass_index(weight, height):
+
+def body_mass_index(weight, height):
     '''Body Mass Index.
     5 points.
 
@@ -140,18 +126,14 @@ int(x)
     float
         the BMI of the person.
     '''
-    
-v=int(input("Feet: "))
-o=int(input("Inches: "))
+    feet = height[0]
+    inches = height[1]
+    def feet_to_meter(feet, inches):
+        return ((feet*12)+inches)/39.37
 
-a=[v,o]
-str(a)
-print(a)
-def listheight(v,o):
-    return ((v*12)+o)/39.37
-listheight(v,o)
-w=float(input("Weight: "))
-def weight(w):
-    return w/2.2
-weight(w)
-weight(w)/(listheight(v,o)**2)
+    def lb_to_kg(w):
+        return w/2.2
+
+    return lb_to_kg(w)/(feet_to_meter(feet, inches)**2)
+    
+
