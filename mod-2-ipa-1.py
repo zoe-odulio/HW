@@ -81,7 +81,7 @@ print((str(int(material_waste(total_material,num_jobs,job_consumption))))+materi
 principal=int(input("Principal Amount: "))
 rate=float(input("Rate in Percentage: "))
 periods=int(input("Period: "))
-def interest(principal, rate, periods):
+#def interest(principal, rate, periods):
     '''Interest.
     5 points.
 
@@ -107,7 +107,7 @@ def interest(principal, rate, periods):
     int
         the final value of the investment
     '''
-def interest(period,rate,t):
+def interest(period,rate,periods):
     return principal*(1+rate*period)
 x=interest(principal,rate,period)
 int(x)
